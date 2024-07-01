@@ -1,0 +1,10 @@
+services:
+  node-project-app:
+    container_name: node-project-app
+    image: node-app
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/src/app
+    command: npm run dev
